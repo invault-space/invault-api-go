@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "f410e6d9-6fa1-4bd0-b978-add4b9dac114",
+		"name": "apigo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "第一个接口示例",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631501606",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "40F4CAD34DE74437BCE3ED45DBAB7909F09B702CB64AB8296AE235E198C7B51FC823A2EF78CD592D61550E8CB57C0143372831B57ADE109EBD208E442884A183BDC4B91313353F9ACAD522FB10AE3AAEB62ABEE35729B7A36A16CAC60364F0ADAC6D62F814F6AC274789E07A068C9EB983397D5092182860300298FB75365761C712C9099CB365E8E56738407AD2A7D6C9D128280DD05C33A66C1EFB3E0E34566EE4D883EDBB7414BB5EDAC60E8AE304089DE66789863B104DE4C6CB6238CE9E8A76A8A0B0E0674DFB46F90930EEE79FE0AF42E838A42F5262B00523965E124F6ABE0F197ECE62AB56EC4A5AA6A356A8C46CE5890DEC79B8DA80AF457753FDA9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 6191,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryAssets\",\r\n\t\"params\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "第二个接口示例",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631513175",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "ABA8F6724D858D1DF4BEA7EC955B9B4E24A26CF3B6E8C4AF9FA7ECF8DB9344E5D558FE71AAEF6E0CC8DABED116F9576FE690C6D8786036F61B89D6CD079359E60A04E1EBFF600D5F0CCD6F6B65F68391F0BDDAFADF25E31A8C65DF3651AB1E7B43967A4955E120A1F528E27AB1953A73C1290889ABCA6911CCE1E551AC29C315BC3494B57903A3E0A4F87B0F76166343711B8523059EFBE440EBFEDE62047768FD47B0D394C212A29BD440EEF982CF8C2553C21792A9C4BF7AC59C50A6649984955AED4D82B422D1B1A0E094E27728CFD9256EA8941B4F4CB2306B5EAFCFC15D6518F26CCF2E364806A5E616B30B4316E75CCFC47181D65E87D434B8D60C668E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 4575,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryAssetByCode\",\r\n\t\"params\": {\r\n\t\t\"assetCode\": \"BNB\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "第三个接口示例",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631513742",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "3587A95BE5668129FC7A9B642D3A5BDE888E4EE38C94BD3CE5368C6A318CEF1FF9CDF1E76F2B297F2A9B83A431233E817D5BB64042F2C794D19D1A6AFD935D0E025F741A3AA89BFFB671CA1D5F024CC6852296F6CF7D577633A2A7F605ACDA2B89934DBF8B552B326FBDFD1B4B2CE1C95069EE8FB5BE8587383463DAA7EB269024939184137CC57F57C4285B24CA8059D96D55FF6AF15691C90CCDDDDC18B42DE334DF3E50192BC2F9FF910019F431A3414C33208A6E957C17B934838F1D81A7D8E7D5E393C4B987551A26BFA5BCE8101A8D9D638065BD6093BD447C1F075012532BAAE455B9ECE681E59779CECDF38EDEE31F05CE0089F2510B0D8CAAA5EC17",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 6989,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryCoins\",\r\n\t\"params\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "第四个接口示例",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631514017",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "6B4CB1B7127F1ACAD7449F958B25162FF511A03CFBE24DB2274E32AAE8B3A5E6883BFEA65296DCE800E84D46A87C9FA21E81C2A0525FE1B210406BF43A326D9F5A4D904FF8E1343A99C9BB49C21E664CFD2D9A2B16C3E12DDAF68928B163F7A64D186CE43AAB1C6E0B54D89D51ECCFD85030E2500FD82B9E186312FE8275048A1B54F4D50A14DCC223D757C11BA0E58F478A1CB52F06CC7C91BD5865E1F748F08ED073343C242E86A19ABCACED8AB4865BAD8E213631E15835E33066842366822EC75667426496298D9A2FB60176CD3A4EE648B91DFEE900036825243E718AEEFCE1E25FE4BC35C4B8BF5E3E600008A7C890C68E88FAF5A83325F80FCDCC10BE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 5677,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryCoinByCode\",\r\n\t\"params\": {\r\n\t\t\"coinCode\": \"BSC\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "第五个接口示例",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631514546",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "17B6CD13028959419E1B2EB0881FEA750528C3194D5B1B6B9E5F9889F1478961D9CB89BF26D41BB0B95AAF6FEAD7FE12653DA1E8A3EB8B044B719A324C100BF17C627CA1A0C99965703BCE502D4D900EDDF9D7F818A13F397CDF3C585B1A6763BBE9ECFD54D1658A28C3EB3A37AAF24AF60439C45CF810BA6B32BB63B80D596B4AEC20F9459D78F046E1AE9B48C21EA699F2038BCCF953657CD20C4478324EC47FF264AD3F7F29C6B158DCE97B4CB175B7AC7ED75C2FEBDB57074DF62EA1BC740DFAA53CA824547E8A7AD36AFA95EDFA4D10186A2D6AC47994037222655EA1CFF9062F32BC59A8086A01EA20B883B750FA27A541864301DB373F885963C6AD5E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 7019,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryAddressesByCoinCode\",\r\n\t\"params\": {\r\n\t\t\"coinCode\": \"BSC\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试错误",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "number",
+						"value": "273477",
+						"type": "text"
+					},
+					{
+						"key": "timeStamp",
+						"value": "1630723036",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "5191F32C1006C34AA687FC9FC25AE5F497007E3E046515B1ABDE35282A457316",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"encrypt\":\"RPRKRCc3DbM4DKltf/HLsA+LWYNyq1Ovt36xACzfCbjv9svooMkz6HfIvc7wCyT84tJQY5dvgIKQdYIAVwDE/XzC0WdJPg8CGbIwymIGiwL7GLlW0QG4ByhIdAIOEbWt0RwhHQ6iNT4cXIh3mGuynYg7tZB3mM5fn4xymFrq1ZxqtLVZwuIOYM/koIgc3KcLL/hBYmLkHvdEuP6Pa7yJWSfznldt1qkHhMC61Vf5eDEBIm6a7Wl4zYJiCgmj4/V3bklTuhi/ZDX9+ETL8n7cRYXzzlmtSVpfR8B3CEWr8VX/ycLPc/R7r7OzhC/bRbbCupCGPwZGZWQGFVjDpVBhBg==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试一",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631501606",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "40F4CAD34DE74437BCE3ED45DBAB7909F09B702CB64AB8296AE235E198C7B51FC823A2EF78CD592D61550E8CB57C0143372831B57ADE109EBD208E442884A183BDC4B91313353F9ACAD522FB10AE3AAEB62ABEE35729B7A36A16CAC60364F0ADAC6D62F814F6AC274789E07A068C9EB983397D5092182860300298FB75365761C712C9099CB365E8E56738407AD2A7D6C9D128280DD05C33A66C1EFB3E0E34566EE4D883EDBB7414BB5EDAC60E8AE304089DE66789863B104DE4C6CB6238CE9E8A76A8A0B0E0674DFB46F90930EEE79FE0AF42E838A42F5262B00523965E124F6ABE0F197ECE62AB56EC4A5AA6A356A8C46CE5890DEC79B8DA80AF457753FDA9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 6191,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryAssets\",\r\n\t\"params\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试一 Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1631501606",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "40F4CAD34DE74437BCE3ED45DBAB7909F09B702CB64AB8296AE235E198C7B51FC823A2EF78CD592D61550E8CB57C0143372831B57ADE109EBD208E442884A183BDC4B91313353F9ACAD522FB10AE3AAEB62ABEE35729B7A36A16CAC60364F0ADAC6D62F814F6AC274789E07A068C9EB983397D5092182860300298FB75365761C712C9099CB365E8E56738407AD2A7D6C9D128280DD05C33A66C1EFB3E0E34566EE4D883EDBB7414BB5EDAC60E8AE304089DE66789863B104DE4C6CB6238CE9E8A76A8A0B0E0674DFB46F90930EEE79FE0AF42E838A42F5262B00523965E124F6ABE0F197ECE62AB56EC4A5AA6A356A8C46CE5890DEC79B8DA80AF457753FDA9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 6191,\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"queryAssets\",\r\n\t\"params\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试二",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1633921364",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "127E2E2F2E8D30C147D0FD223B71075A73D8E65BFF2AF0BF7F70E7C8BD18C1CCA65FD3337F7E1A7C5A1226573E40FC4EA6E7E624424DDCD238E1D2EE4D6D8F905E5EE282EE224871D299119DAA027261E586FAAC463573FB4850BE3145C750DC70403891DDA95AFA79D5829E794AA83BC958B2BC162D179FA0D1531E00980E73E777B429EF5AF1341393B69B31D07DD4379A1365863F523EA25E62FA957C426389C4D7907B96C59AE95B77F68F3511494890D9E6608E3F2BCD3E843F3CBD9A4ACF86D03967F1B9FCA30A782F7E9864DAE02F759A40D26B54D474F53B14507AD6B4B5D7D070A3119DA8341F35A96E2D0545E1C14C45719073421F0B90D505B359",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":7632,\"jsonrpc\":\"2.0\",\"method\":\"queryAssetByCode\",\"params\":{\"assetCode\":\"ETH\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试三",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1633921436",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "563AEDC562DD7933153F3AFEAFD6DE82BEF7B9AA86CA350925FE3D292A9878BD28A52DD38F8DF8CAAA4C19A5B86A65A9A18530BED94D41164A2AF2829DFB3350252668DDBA058DC550C60CD692969DB56B03C9C41203DBD5001628F96166B4906B9997AC5C46BF17167AD4B465D52F402EB52F30278BA0DACDCEBD195D808653F2A03B2BDD81CEDF3E3D8248ED3B4810B19444F2026E7766AE6778F68A05F721B161DBBC3FC6905593AA4E98ADE11F27F156E7B581C95ABD13C776C6B00BD0D76C9FF2C2ED1306880F9E50B164816BB14EBB318F93F8F77103C675D82BBB813D1F61B80CD17AD91EFED09521C1AE8795ECF36C98F016AE15C73DDD61F017C229",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1435,\"jsonrpc\":\"2.0\",\"method\":\"queryCoins\",\"params\":{}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试四",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1633921832",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "665BE42A8C4DCB2EFC56ECB9887F78B72EBDC366E591A4AC9C2B4930E2F436A0BEE23D985234E07B90AA58081D9E2CA349FBA4FA888B0F6025916F7EAC7AED94879681EDAB460D57D14134D1BD87354AE9340673626EA39342CA06FD7023B8BEE90700557BA93CFCA7E93F26AE6629EB1DC8D2B89F54BE41C65406DA567F313010F5A180FF1D3F75D9F99796EF585E7ED709218DB80DE3A8CF53D5376128772222012452FFEEE4630119C2B3D634CC7FA662E8839CD1858369D288AE0773B486557E37E1D84E0AD6527EA8AC49E9D9596DCC3485BA2A4C611800824E8276BFEF087CC7E02190AD8B6EAB257731A378B5F77136793538E9F120CFB5C3C715747F",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":882,\"jsonrpc\":\"2.0\",\"method\":\"queryCoinByCode\",\"params\":{\"coinCode\":\"ETH\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "测试环境-请求测试五",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1633921936",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "B35DED1B0C9BD19CB7CB19BD0412DE5D236ADE8794D3596D941421C9D236CEC58F75AB9DA43DAC83697E7C93750E6E8684B4EFB336DB7B8F7863A8AA9FDA4F413082A4D87B80A6DD5F65E5B9BB957D589366E2364B5877EEE8367F777D8338B0D3B2A62880C5764461E868A32CB30EF40838DFC32B709926F55A87E15DCE3386399F994C2A218ED3A8F56539F4502B6716AE0280B18403CB8E66C72CE41706A906841FA958153F89BCB7CFEEB3995553638E807AC1CB90455889F5B64CB841D4D4562F164A2D16807FA9EBC67821B21E0062677E31AE434A63589EC48D8F6A0AA00140F25A2B719AB9085D6903E23020FDBDDE78CCC2C3AA0EC32CF2E8B4A6AB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":4047,\"jsonrpc\":\"2.0\",\"method\":\"queryAddressesByCoinCode\",\"params\":{\"coinCode\":\"ETH\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://10.0.152.131:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "第六个接口示例-新",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1634637051",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "12F39444C82EC58A7604CCBDE9812B4A9D8D92CADCFC7FCE0AD1F18023F0C4F3E7DA3E142C8F6CFD592385E2821358235C59A0FF692A1656D20B8E010D568CAAE477C75817AA99004DEC041ACA4EC75B3CCD53CBBF7CA0C0D0D00F823DE1837448FA14DBD8ABD84C95CC906C9A32DED2BE660681B5392B25F843BC4B25B879E2A6284D804AA179F5F2E4083BCF0D3EC2C52C4618E6149ECE0251BE7A576DD23597925A25B24714E0699222ED14F6F8702A9CB7BBD403D53311F90749C57A370B60D9C1A791ADACE767D006CFC3A0E261B0E3C6CF0328D1FCB7C8CDB78665DA4E7C007C19F97A57751DFA272D28B98D63214107EC93DF0DEB580CA24B04424B12",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":86,\"jsonrpc\":\"2.0\",\"method\":\"blockHeight\",\"params\":{}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "获取充值地址",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "timeStamp",
+						"value": "1636343458",
+						"type": "text"
+					},
+					{
+						"key": "keyStr",
+						"value": "83c846b2433348da837b3aeb2e76fea6",
+						"type": "text"
+					},
+					{
+						"key": "sign",
+						"value": "27685A89B369317C4D7373723D16DE182F322B40F54D3C15C483ABD7788E97AECD262F963D29394C203239EAA9E250F44424D1B5E7F98AE81AA7AAB7F548B64D5EFFA207725BE58C6B67AA9A402C4D7346F90437F9C03A0CF4A9005484D1A1C995FB36F34A31AFB515CF0BBF94DBB9170CC65F20DD870F11E11FD3ED64141EF444BB416D5927B225B06829423CB0C5BDABD19DCF5F1D90079A95A59A334FC55E4B2D85AEBBD3C70F41F8CA7CA7D967ADAB880F018A182627B5E402EB28F85A0E0BD27FAC48C64D1D583D2EE7A38F45B41ECE8272CB3253874B394E03E7849E65D0A29C1B366B9915EE4A47ADBF224CF875FF3CF7FA41FB8FEEF89D5A273354EA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":3568,\"jsonrpc\":\"2.0\",\"method\":\"getDepositAddress\",\"params\":{\"coinCode\":\"CLV\",\"limit\":5}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8084/open/api/v1"
+			},
+			"response": []
+		}
+	]
+}
