@@ -1,47 +1,76 @@
 package entity
 
-type QueryAssets struct {
+type QueryAssetsReq struct {
+	OpenRequest
+	Params interface{} `json:"params,omitempty"`
 }
 
-func (a QueryAssets) Method() string {
-	return "queryAssets"
+func (a *QueryAssetsReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryAssets"
 }
-func (a QueryAssets) Vaildate() error {
+
+func (a *QueryAssetsReq) Vaildate() error {
 	return nil
 }
 
+//
+//
 //
 type QueryAssetByCode struct {
 	AssetCode string `json:"assetCode"`
 }
 
-func (a QueryAssetByCode) Method() string {
-	return "queryAssetByCode"
+type QueryAssetByCodeReq struct {
+	OpenRequest
+	Params QueryAssetByCode `json:"params,omitempty"`
 }
-func (a QueryAssetByCode) Vaildate() error {
+
+func (a *QueryAssetByCodeReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryAssetByCode"
+}
+
+func (a *QueryAssetByCodeReq) Vaildate() error {
 	return nil
 }
 
 //
-type QueryCoins struct {
+//
+
+type QueryCoinsReq struct {
+	OpenRequest
+	Params interface{} `json:"params,omitempty"`
 }
 
-func (a QueryCoins) Method() string {
-	return "queryCoins"
+func (a *QueryCoinsReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryCoins"
 }
-func (a QueryCoins) Vaildate() error {
+func (a *QueryCoinsReq) Vaildate() error {
 	return nil
 }
 
 //queryCoinByCode
+//
 type QueryCoinByCode struct {
 	CoinCode string `json:"coinCode"`
 }
 
-func (a QueryCoinByCode) Method() string {
-	return "queryCoinByCode"
+type QueryCoinByReq struct {
+	OpenRequest
+	Params QueryCoinByCode `json:"params,omitempty"`
 }
-func (a QueryCoinByCode) Vaildate() error {
+
+func (a *QueryCoinByReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryCoinByCode"
+}
+func (a *QueryCoinByReq) Vaildate() error {
 	return nil
 }
 
@@ -51,11 +80,17 @@ type QueryAddressesByCoinCode struct {
 	PageNum  int    `json:"pageNum,omitempty"`
 	PageSize int    `json:"pageSize,omitempty"`
 }
-
-func (a QueryAddressesByCoinCode) Method() string {
-	return "queryAddressesByCoinCode"
+type QueryAddressesByCoinCodeReq struct {
+	OpenRequest
+	Params QueryAddressesByCoinCode `json:"params,omitempty"`
 }
-func (a QueryAddressesByCoinCode) Vaildate() error {
+
+func (a *QueryAddressesByCoinCodeReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryAddressesByCoinCode"
+}
+func (a *QueryAddressesByCoinCodeReq) Vaildate() error {
 	return nil
 }
 
@@ -68,11 +103,17 @@ type QueryAddressesInfo struct {
 	CoinCode    string    `json:"coinCode"`
 	AddressList []Address `json:"addressList"`
 }
-
-func (a QueryAddressesInfo) Method() string {
-	return "queryAddressesInfo"
+type QueryAddressesInfoReq struct {
+	OpenRequest
+	Params QueryAddressesInfo `json:"params,omitempty"`
 }
-func (a QueryAddressesInfo) Vaildate() error {
+
+func (a *QueryAddressesInfoReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryAddressesInfo"
+}
+func (a *QueryAddressesInfoReq) Vaildate() error {
 	return nil
 }
 
@@ -82,11 +123,17 @@ type CheckAddress struct {
 	Address  string `json:"address"`
 	Memo     string `json:"memo,omitempty"`
 }
-
-func (a CheckAddress) Method() string {
-	return "checkAddress"
+type CheckAddressReq struct {
+	OpenRequest
+	Params CheckAddress `json:"params,omitempty"`
 }
-func (a CheckAddress) Vaildate() error {
+
+func (a *CheckAddressReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "checkAddress"
+}
+func (a *CheckAddressReq) Vaildate() error {
 	return nil
 }
 
@@ -95,10 +142,16 @@ type GetDepositAddress struct {
 	CoinCode string `json:"coinCode"`
 	Limit    uint64 `json:"limit,omitempty"`
 }
-
-func (a GetDepositAddress) Method() string {
-	return "getDepositAddress"
+type GetDepositAddressReq struct {
+	OpenRequest
+	Params GetDepositAddress `json:"params,omitempty"`
 }
-func (a GetDepositAddress) Vaildate() error {
+
+func (a *GetDepositAddressReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "getDepositAddress"
+}
+func (a *GetDepositAddressReq) Vaildate() error {
 	return nil
 }

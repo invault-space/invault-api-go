@@ -14,6 +14,5 @@ type OpenReuslt struct {
 	Id      int         `json:"id"`
 	JsonRpc string      `json:"jsonrpc"`
 	Method  string      `json:"method"`
-	Result  interface{} `json:"result,omitempty"`
 	Error   interface{} `json:"error,omitempty"`
 }

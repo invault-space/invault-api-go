@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-type OpenRequest struct {
+type OpenService struct {
 	Url  string
 	Head string
 	Sign string
@@ -20,31 +20,32 @@ type OpenRequest struct {
 	KeyStr string
 }
 
-func NewOpenRequest(prvKey, keyStr, url string) OpenRequest {
-	return OpenRequest{
+func NewOpenService(prvKey, keyStr, url string) OpenService {
+	return OpenService{
 		PrvKey: prvKey,
 		KeyStr: keyStr,
 		Url:    url,
 	}
 }
 
-func (or *OpenRequest) Call(a *entity.Abstract) (*OpenReuslt, error) {
+func (or *OpenService) Call(id int, a entity.IOpenEntity) ([]byte, error) {
+	a.Init(id)
 	err := a.Vaildate()
 	if err != nil {
 		return nil, err
 	}
-	sign, err := crypto.RsaSign(or.PrvKey, a.String())
+	b, _ := json.Marshal(a)
+
+	sign, err := crypto.RsaSign(or.PrvKey, string(b))
 	if err != nil {
 		return nil, err
 	}
-	result, err := or.HttpPost([]byte(a.String()), sign)
+	result, err := or.HttpPost([]byte(string(b)), sign)
 
-	ret := OpenReuslt{}
-	err = json.Unmarshal(result, &ret)
-	return &ret, err
+	return result, err
 }
 
-func (or *OpenRequest) HttpPost(body []byte, sign string) ([]byte, error) {
+func (or *OpenService) HttpPost(body []byte, sign string) ([]byte, error) {
 
 	req, _ := http.NewRequest("POST", or.Url, bytes.NewBuffer(body))
 
