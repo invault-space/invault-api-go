@@ -8,7 +8,7 @@ import (
 )
 
 func usage() {
-	fmt.Printf("rule-engine version: %s\n", 1)
+	fmt.Printf("rule-engine version: %d\n", 1)
 	flag.PrintDefaults()
 	os.Exit(0)
 }

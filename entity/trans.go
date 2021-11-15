@@ -8,10 +8,18 @@ type Transactions struct {
 	EndTime   uint64 `json:"endTime,omitempty"`
 }
 
-func (a Transactions) Method() string {
-	return "transactions"
+type TransactionsReq struct {
+	OpenRequest
+	Params Transactions `json:"params,omitempty"`
 }
-func (a Transactions) Vaildate() error {
+
+func (a *TransactionsReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "transactions"
+}
+
+func (a *TransactionsReq) Vaildate() error {
 	return nil
 }
 
@@ -21,10 +29,18 @@ type TransactionById struct {
 	CustodyOrderId string `json:"custodyOrderId"`
 }
 
-func (a TransactionById) Method() string {
-	return "transactionById"
+type TransactionByIdReq struct {
+	OpenRequest
+	Params TransactionById `json:"params,omitempty"`
 }
-func (a TransactionById) Vaildate() error {
+
+func (a *TransactionByIdReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "transactionById"
+}
+
+func (a *TransactionByIdReq) Vaildate() error {
 	return nil
 }
 
@@ -37,10 +53,18 @@ type PendingTransactions struct {
 	EndTime   uint64 `json:"endTime,omitempty"`
 }
 
-func (a PendingTransactions) Method() string {
-	return "pendingTransactions"
+type PendingTransactionsReq struct {
+	OpenRequest
+	Params PendingTransactions `json:"params,omitempty"`
 }
-func (a PendingTransactions) Vaildate() error {
+
+func (a *PendingTransactionsReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "pendingTransactions"
+}
+
+func (a *PendingTransactionsReq) Vaildate() error {
 	return nil
 }
 
@@ -50,10 +74,18 @@ type PendingTransactionById struct {
 	CustodyOrderId string `json:"custodyOrderId"`
 }
 
-func (a PendingTransactionById) Method() string {
-	return "pendingTransactionById"
+type PendingTransactionByIdReq struct {
+	OpenRequest
+	Params PendingTransactionById `json:"params,omitempty"`
 }
-func (a PendingTransactionById) Vaildate() error {
+
+func (a *PendingTransactionByIdReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "pendingTransactionById"
+}
+
+func (a *PendingTransactionByIdReq) Vaildate() error {
 	return nil
 }
 
@@ -63,21 +95,34 @@ type TransactionByTxHash struct {
 	TxHash   string `json:"txHash"`
 }
 
-func (a TransactionByTxHash) Method() string {
-	return "transactionByTxHash"
+type TransactionByTxHashReq struct {
+	OpenRequest
+	Params TransactionByTxHash `json:"params,omitempty"`
 }
-func (a TransactionByTxHash) Vaildate() error {
+
+func (a *TransactionByTxHashReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "transactionByTxHash"
+}
+
+func (a *TransactionByTxHashReq) Vaildate() error {
 	return nil
 }
 
 //
-type BlockHeight struct {
+type BlockHeightReq struct {
+	OpenRequest
+	Params interface{} `json:"params,omitempty"`
 }
 
-func (a BlockHeight) Method() string {
-	return "blockHeight"
+func (a *BlockHeightReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "blockHeight"
 }
-func (a BlockHeight) Vaildate() error {
+
+func (a *BlockHeightReq) Vaildate() error {
 	return nil
 }
 
@@ -86,10 +131,17 @@ type TransactionByBlockHeight struct {
 	CoinCode    string `json:"coinCode"`
 	BlockHeight uint64 `json:"blockHeight"`
 }
-
-func (a TransactionByBlockHeight) Method() string {
-	return "transactionByBlockHeight"
+type TransactionByBlockHeightReq struct {
+	OpenRequest
+	Params TransactionByBlockHeight `json:"params,omitempty"`
 }
-func (a TransactionByBlockHeight) Vaildate() error {
+
+func (a *TransactionByBlockHeightReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "transactionByBlockHeight"
+}
+
+func (a *TransactionByBlockHeightReq) Vaildate() error {
 	return nil
 }

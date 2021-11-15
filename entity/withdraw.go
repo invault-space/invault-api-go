@@ -10,11 +10,18 @@ type WithdrawApply struct {
 	Amount         string `json:"amount"`
 	Timestamp      uint64 `json:"timestamp"`
 }
-
-func (a WithdrawApply) Method() string {
-	return "withdrawApply"
+type WithdrawApplyReq struct {
+	OpenRequest
+	Params WithdrawApply `json:"params,omitempty"`
 }
-func (a WithdrawApply) Vaildate() error {
+
+func (a *WithdrawApplyReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "withdrawApply"
+}
+
+func (a *WithdrawApplyReq) Vaildate() error {
 	return nil
 }
 
@@ -23,9 +30,17 @@ type QueryByReqOrderId struct {
 	RequestOrderId string `json:"requestOrderId"`
 }
 
-func (a QueryByReqOrderId) Method() string {
-	return "queryByReqOrderId"
+type QueryByReqOrderIdReq struct {
+	OpenRequest
+	Params QueryByReqOrderId `json:"params,omitempty"`
 }
-func (a QueryByReqOrderId) Vaildate() error {
+
+func (a *QueryByReqOrderIdReq) Init(id int) {
+	a.init()
+	a.Id = id
+	a.Method = "queryByReqOrderId"
+}
+
+func (a *QueryByReqOrderIdReq) Vaildate() error {
 	return nil
 }

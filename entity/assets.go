@@ -60,17 +60,17 @@ type QueryCoinByCode struct {
 	CoinCode string `json:"coinCode"`
 }
 
-type QueryCoinByReq struct {
+type QueryCoinByCodeReq struct {
 	OpenRequest
 	Params QueryCoinByCode `json:"params,omitempty"`
 }
 
-func (a *QueryCoinByReq) Init(id int) {
+func (a *QueryCoinByCodeReq) Init(id int) {
 	a.init()
 	a.Id = id
 	a.Method = "queryCoinByCode"
 }
-func (a *QueryCoinByReq) Vaildate() error {
+func (a *QueryCoinByCodeReq) Vaildate() error {
 	return nil
 }
 
