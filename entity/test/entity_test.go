@@ -14,8 +14,8 @@ func TestEntity(t *testing.T) {
 
 	or := service.NewOpenService(prv, keystr, DefUrl)
 
-	//资产&地址
-	//1.查询钱包下资产列表(queryAssets)
+	//
+	//1.queryAssets
 	qar := &entity.QueryAssetsReq{}
 	rlt, err := or.Call(1231, qar)
 	if err != nil {
@@ -26,7 +26,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("QueryAssetsResp err:", err)
 	}
-	//2.查询钱包下指定资产详情(queryAssetByCode)
+	//2.queryAssetByCode
 	qabcr := &entity.QueryAssetByCodeReq{}
 	rlt, err = or.Call(1231, qabcr)
 	if err != nil {
@@ -37,7 +37,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("QueryAssetsResp err:", err)
 	}
-	//3.查询钱包下币种列表(queryCoins)
+	//3.queryCoins
 	qcr := &entity.QueryCoinsReq{}
 	rlt, err = or.Call(1231, qcr)
 	if err != nil {
@@ -48,7 +48,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("QueryAssetsResp err:", err)
 	}
-	//4.查询钱包下指定币种详情(queryCoinByCode)
+	//4.queryCoinByCode
 	qcbcr := &entity.QueryCoinByCodeReq{}
 	rlt, err = or.Call(1231, qcbcr)
 	if err != nil {
@@ -59,7 +59,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//5.查询币种地址总表(queryAddressesByCoinCode)
+	//5.queryAddressesByCoinCode
 	qabccr := &entity.QueryAddressesByCoinCodeReq{}
 	rlt, err = or.Call(1231, qabccr)
 	if err != nil {
@@ -70,7 +70,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//6.批量校验地址信息(queryAddressesInfo)
+	//6.queryAddressesInfo
 	qair := &entity.QueryAddressesInfoReq{}
 	rlt, err = or.Call(1231, qair)
 	if err != nil {
@@ -81,7 +81,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//7.验证地址合法性(checkAddress)
+	//7.checkAddress
 	car := &entity.CheckAddressReq{}
 	rlt, err = or.Call(1231, car)
 	if err != nil {
@@ -92,7 +92,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//8.获取充值地址(getDepositAddress)
+	//8.getDepositAddress
 	gdar := &entity.GetDepositAddressReq{}
 	rlt, err = or.Call(1231, gdar)
 	if err != nil {
@@ -103,8 +103,8 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//提币
-	//9.发起提币申请(withdrawApply)
+
+	//9.withdrawApply
 	war := &entity.WithdrawApplyReq{}
 	rlt, err = or.Call(1231, war)
 	if err != nil {
@@ -115,7 +115,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//10.根据请求订单号获取提币交易详情(queryByReqOrderId)
+	//10.queryByReqOrderId
 	qbror := &entity.QueryByReqOrderIdReq{}
 	rlt, err = or.Call(1231, qbror)
 	if err != nil {
@@ -126,8 +126,8 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//交易查询
-	//11.通过时间查询获取已确认交易记录列表(transactions)
+	//
+	//11.transactions
 	tr := &entity.TransactionsReq{}
 	rlt, err = or.Call(1231, tr)
 	if err != nil {
@@ -138,7 +138,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//12.根据订单号获取已确认交易详情(transactionById)
+	//12.transactionById
 	tbir := &entity.TransactionByIdReq{}
 	rlt, err = or.Call(1231, tbir)
 	if err != nil {
@@ -149,7 +149,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//13.通过时间查询获取确认中交易记录(pendingTransactions)
+	//13.pendingTransactions
 	ptr := &entity.PendingTransactionsReq{}
 	rlt, err = or.Call(1231, ptr)
 	if err != nil {
@@ -160,7 +160,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//14.根据id获取确认中的交易详情(pendingTransactionById)
+	//14.pendingTransactionById
 	ptbir := &entity.PendingTransactionByIdReq{}
 	rlt, err = or.Call(1231, ptbir)
 	if err != nil {
@@ -171,7 +171,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//15.通过txHash 查询交易(transactionByTxHash)
+	//15.transactionByTxHash
 	tbthr := &entity.TransactionByTxHashReq{}
 	rlt, err = or.Call(1231, tbthr)
 	if err != nil {
@@ -182,7 +182,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//16.获取交易区块高度(blockHeight)
+	//16.blockHeight)
 	bhr := &entity.BlockHeightReq{}
 	rlt, err = or.Call(1231, bhr)
 	if err != nil {
@@ -193,7 +193,7 @@ func TestEntity(t *testing.T) {
 	if err != nil {
 		t.Fatal("OpenService err:", err)
 	}
-	//17.通过BlockHeight查询交易(transactionByBlockHeight)
+	//17.transactionByBlockHeight
 	tbbhr := &entity.TransactionByBlockHeightReq{}
 	rlt, err = or.Call(1231, tbbhr)
 	if err != nil {
