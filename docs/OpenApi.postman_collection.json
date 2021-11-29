@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "第一个接口示例",
+			"name": "example queryAssets",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -40,7 +40,7 @@
 			"response": []
 		},
 		{
-			"name": "第二个接口示例",
+			"name": "example queryAssetByCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -74,7 +74,7 @@
 			"response": []
 		},
 		{
-			"name": "第三个接口示例",
+			"name": "example queryCoins",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -108,7 +108,7 @@
 			"response": []
 		},
 		{
-			"name": "第四个接口示例",
+			"name": "example queryCoinByCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -142,7 +142,7 @@
 			"response": []
 		},
 		{
-			"name": "第五个接口示例",
+			"name": "example queryAddressesByCoinCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -176,7 +176,7 @@
 			"response": []
 		},
 		{
-			"name": "测试错误",
+			"name": "err case",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -215,7 +215,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试一",
+			"name": "testcase queryAssets",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -249,7 +249,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试一 Copy",
+			"name": "testcase queryAssets-1",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -283,7 +283,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试二",
+			"name": "testcase queryAssetByCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -317,7 +317,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试三",
+			"name": "testcase queryCoins",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -351,7 +351,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试四",
+			"name": "testcase queryCoinByCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -385,7 +385,7 @@
 			"response": []
 		},
 		{
-			"name": "测试环境-请求测试五",
+			"name": "testcase queryAddressesByCoinCode",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -419,7 +419,7 @@
 			"response": []
 		},
 		{
-			"name": "第六个接口示例-新",
+			"name": "testcase blockHeight",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -453,7 +453,7 @@
 			"response": []
 		},
 		{
-			"name": "获取充值地址",
+			"name": "testcase getDepositAddress",
 			"request": {
 				"method": "POST",
 				"header": [
